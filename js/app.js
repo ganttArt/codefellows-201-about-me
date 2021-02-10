@@ -1,6 +1,7 @@
 'use strict';
 
-alert('Get ready for 5 yes or no questions to learn more about Chris Gantt. Please answer y/n or yes/no.');
+let userName = prompt('What is your name?');
+alert(`Hello ${userName}, get ready for 5 yes or no questions to learn more about Chris Gantt. Please answer y/n or yes/no.`);
 
 let hometown = prompt('Was Chris born and raised in Seattle?').toLowerCase();
 let hasDog = prompt('Does Chris have a dog?').toLowerCase();
@@ -47,3 +48,5 @@ if ((beard === 'yes') || (beard === 'y')) {
   alert('You guessed incorrectly. Chris does have a beard.');
   // console.log('You guessed incorrectly. Chris does have a beard.');
 }
+
+alert(userName + ', thanks for guessing and learning more about me.');
