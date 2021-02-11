@@ -49,4 +49,25 @@ if ((beard === 'yes') || (beard === 'y')) {
   // console.log('You guessed incorrectly. Chris does have a beard.');
 }
 
+let randomNumber = Math.floor(Math.random() * 100) + 1;
+// https://www.w3schools.com/js/js_random.asp
+
+let guessedNumber = prompt('Guess a number from 1 to 100');
+
+for (let i = 0; i < 4; i++) {
+  console.log(guessedNumber);
+  if (guessedNumber === randomNumber) {
+    alert(`You guessed correctly, the number is ${guessedNumber}`);
+    break;
+  } else if (i === 3) {
+    alert(`You did not guess the correct number, it was ${randomNumber}`);
+  } else if (guessedNumber < randomNumber) {
+    guessedNumber = prompt('You guessed too low, guess again!');
+  } else if (guessedNumber > randomNumber) {
+    guessedNumber = prompt('You guessed too high, guess again!');
+  } else {
+    guessedNumber = prompt('Guess again!');
+  }
+}
+
 alert(userName + ', thanks for guessing and learning more about me.');
