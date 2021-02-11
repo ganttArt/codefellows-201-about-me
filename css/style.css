@@ -1,4 +1,23 @@
+main {
+    max-width: 50%;
+    margin: auto;
+}
+
 h1 {
     color: firebrick;
     text-align: center;
+}
+
+footer {
+    text-align: right;
+}
+
+#bio {
+    text-align: center;
+}
+
+@media screen and (max-width: 717px) {
+    main {
+        max-width: 80%;
+    }
 }
