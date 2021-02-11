@@ -70,4 +70,30 @@ for (let i = 0; i < 4; i++) {
   }
 }
 
+let coasterAnswers = [
+  'Steel Vengeance',
+  'The Incredible Hulk Coaster',
+  'Valravn',
+  'Millennium Force',
+  'Rougarou',
+  'Top Thrill Dragster',
+];
+
+let answeredCorrectly = false;
+for (let i = 0; i < 6; i++) {
+  if (answeredCorrectly) {
+    break;
+  } else {
+    let coasterGuess = prompt('Guess a Chris Gantt approved roller coaster!');
+    for (let i = 0; i < coasterAnswers.length; i++) {
+      if (coasterAnswers[i] === coasterGuess) {
+        alert('You guessed correctly!');
+        answeredCorrectly = true;
+        break;
+      }
+    }
+  }
+}
+alert(`Chris's approved roller coasters are ${coasterAnswers}`);
+
 alert(userName + ', thanks for guessing and learning more about me.');
