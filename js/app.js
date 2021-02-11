@@ -4,7 +4,10 @@ let userName = prompt('What is your name?');
 alert(`Hello ${userName}, get ready for 5 yes or no questions to learn more about Chris Gantt. Please answer y/n or yes/no.`);
 let correctAnswerTally = 0;
 
-let hometown = prompt('Was Chris born and raised in Seattle?').toLowerCase();
+let hometown = prompt('Was Chris born and raised in Seattle?');
+if (hometown) {
+  hometown = hometown.toLowerCase();
+}
 console.log('hometown question asked');
 if ((hometown === 'no') || (hometown === 'n')) {
   alert('You were correct. Chris was not born and raised in Seattle, it was in Bellevue/Issaquah WA.');
@@ -16,7 +19,10 @@ if ((hometown === 'no') || (hometown === 'n')) {
 }
 console.log(`Correct Answers = ${correctAnswerTally}`);
 
-let hasDog = prompt('Does Chris have a dog?').toLowerCase();
+let hasDog = prompt('Does Chris have a dog?');
+if (hasDog) {
+  hasDog = hasDog.toLowerCase();
+}
 console.log('dog question asked');
 if ((hasDog === 'yes') || (hasDog === 'y')) {
   alert('You were correct. Chris does have a dog.');
@@ -28,7 +34,10 @@ if ((hasDog === 'yes') || (hasDog === 'y')) {
 }
 console.log(`Correct Answers = ${correctAnswerTally}`);
 
-let married = prompt('Is Chris married?').toLowerCase();
+let married = prompt('Is Chris married?');
+if (married) {
+  married = married.toLowerCase();
+}
 console.log('marriage question asked');
 if ((married === 'yes') || (married === 'y')) {
   alert('You were correct. Chris is married.');
@@ -40,7 +49,10 @@ if ((married === 'yes') || (married === 'y')) {
 }
 console.log(`Correct Answers = ${correctAnswerTally}`);
 
-let children = prompt('Does Chris have a child?').toLowerCase();
+let children = prompt('Does Chris have a child?');
+if (children) {
+  children = children.toLowerCase();
+}
 console.log('children question asked');
 if ((children === 'no') || (children === 'n')) {
   alert('You were correct. Chris does not have children.');
@@ -52,7 +64,10 @@ if ((children === 'no') || (children === 'n')) {
 }
 console.log(`Correct Answers = ${correctAnswerTally}`);
 
-let beard = prompt('Does Chris have a beard?').toLowerCase();
+let beard = prompt('Does Chris have a beard?');
+if (beard) {
+  beard = beard.toLowerCase();
+}
 console.log('beard question asked');
 if ((beard === 'yes') || (beard === 'y')) {
   alert('You were correct. Chris does have a beard.');
