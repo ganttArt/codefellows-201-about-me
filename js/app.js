@@ -5,11 +5,7 @@ alert(`Hello ${userName}, get ready for 5 yes or no questions to learn more abou
 let correctAnswerTally = 0;
 
 let hometown = prompt('Was Chris born and raised in Seattle?').toLowerCase();
-let hasDog = prompt('Does Chris have a dog?').toLowerCase();
-let married = prompt('Is Chris married?').toLowerCase();
-let children = prompt('Does Chris have a child?').toLowerCase();
-let beard = prompt('Does Chris have a beard?').toLowerCase();
-
+console.log('hometown question asked');
 if ((hometown === 'no') || (hometown === 'n')) {
   alert('You were correct. Chris was not born and raised in Seattle, it was in Bellevue/Issaquah WA.');
   correctAnswerTally += 1;
@@ -18,7 +14,10 @@ if ((hometown === 'no') || (hometown === 'n')) {
   alert('You guessed incorrectly. Chris was not born and raised in Seattle.');
   // console.log('You guessed incorrectly. Chris was not born and raised in Seattle.');
 }
+console.log(`Correct Answers = ${correctAnswerTally}`);
 
+let hasDog = prompt('Does Chris have a dog?').toLowerCase();
+console.log('dog question asked');
 if ((hasDog === 'yes') || (hasDog === 'y')) {
   alert('You were correct. Chris does have a dog.');
   correctAnswerTally += 1;
@@ -27,7 +26,10 @@ if ((hasDog === 'yes') || (hasDog === 'y')) {
   alert('You guessed incorrectly. Chris does have a dog.');
   // console.log('You guessed incorrectly. Chris does have a dog.');
 }
+console.log(`Correct Answers = ${correctAnswerTally}`);
 
+let married = prompt('Is Chris married?').toLowerCase();
+console.log('marriage question asked');
 if ((married === 'yes') || (married === 'y')) {
   alert('You were correct. Chris is married.');
   correctAnswerTally += 1;
@@ -36,7 +38,10 @@ if ((married === 'yes') || (married === 'y')) {
   alert('You guessed incorrectly. Chris is married.');
   // console.log('You guessed incorrectly. Chris is married.');
 }
+console.log(`Correct Answers = ${correctAnswerTally}`);
 
+let children = prompt('Does Chris have a child?').toLowerCase();
+console.log('children question asked');
 if ((children === 'no') || (children === 'n')) {
   alert('You were correct. Chris does not have children.');
   correctAnswerTally += 1;
@@ -45,7 +50,10 @@ if ((children === 'no') || (children === 'n')) {
   alert('You guessed incorrectly. Chris does not have children.');
   // console.log('You guessed incorrectly. Chris does not have children.');
 }
+console.log(`Correct Answers = ${correctAnswerTally}`);
 
+let beard = prompt('Does Chris have a beard?').toLowerCase();
+console.log('beard question asked');
 if ((beard === 'yes') || (beard === 'y')) {
   alert('You were correct. Chris does have a beard.');
   correctAnswerTally += 1;
@@ -54,14 +62,17 @@ if ((beard === 'yes') || (beard === 'y')) {
   alert('You guessed incorrectly. Chris does have a beard.');
   // console.log('You guessed incorrectly. Chris does have a beard.');
 }
+console.log(`Correct Answers = ${correctAnswerTally}`);
+
 
 let randomNumber = Math.floor(Math.random() * 100) + 1;
 // https://www.w3schools.com/js/js_random.asp
 
 let guessedNumber = prompt('Guess a number from 1 to 100');
+console.log('number guessing game beginning');
 
 for (let i = 0; i < 4; i++) {
-  console.log(guessedNumber);
+  console.log('user guessed ' + guessedNumber);
   if (guessedNumber === randomNumber) {
     alert(`You guessed correctly, the number is ${guessedNumber}`);
     correctAnswerTally += 1;
@@ -76,6 +87,7 @@ for (let i = 0; i < 4; i++) {
     guessedNumber = prompt('Guess again!');
   }
 }
+console.log(`Correct Answers = ${correctAnswerTally}`);
 
 let coasterAnswers = [
   'Steel Vengeance',
@@ -86,15 +98,18 @@ let coasterAnswers = [
   'Top Thrill Dragster',
 ];
 
+console.log('roller coaster guessing game beginning');
 let answeredCorrectly = false;
 for (let i = 0; i < 6; i++) {
   if (answeredCorrectly) {
     break;
   } else {
     let coasterGuess = prompt('Guess a Chris Gantt approved roller coaster!');
+    console.log('user guessed ' + coasterGuess);
     for (let i = 0; i < coasterAnswers.length; i++) {
       if (coasterAnswers[i] === coasterGuess) {
         alert('You guessed correctly!');
+        console.log('user guessed a roller coaster correctly');
         correctAnswerTally += 1;
         answeredCorrectly = true;
         break;
@@ -103,5 +118,6 @@ for (let i = 0; i < 6; i++) {
   }
 }
 alert(`Chris's approved roller coasters are ${coasterAnswers}`);
+console.log(`Correct Answers = ${correctAnswerTally}`);
 
 alert(`${userName}, thanks for guessing and learning more about me. You got ${correctAnswerTally}/7 questions correct!`);
